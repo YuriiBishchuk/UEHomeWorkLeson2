@@ -15,6 +15,7 @@ AMyActorForStarLevel::AMyActorForStarLevel()
 void AMyActorForStarLevel::BeginPlay()
 {
 	Super::BeginPlay();
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &AMyActorForStarLevel::ChangeColorActor, 5.0f, true, 5.0f);
 	
 }
 
@@ -22,6 +23,12 @@ void AMyActorForStarLevel::BeginPlay()
 void AMyActorForStarLevel::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+}
+
+void AMyActorForStarLevel::ChangeColorActor()
+{
+
 
 }
 

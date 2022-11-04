@@ -14,6 +14,9 @@ class UEHOMEWORKLESON2_API AMyActor : public AActor
 public:	
 	// Sets default values for this actor's properties
 	AMyActor();
+	UPROPERTY(EditAnywhere)
+	int GHideAfterSecond = 5;
+	FTimerHandle TimerHandle;
 
 protected:
 	// Called when the game starts or when spawned
@@ -22,5 +25,5 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	void HideActor();
 };
