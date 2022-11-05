@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "Components/TextRenderComponent.h"
 #include "GameFramework/Actor.h"
 #include "MyActorForStarLevel.generated.h"
 
@@ -24,5 +25,10 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void ChangeColorActor();
+	UPROPERTY(VisibleAnywhere)
+	UStaticMeshComponent* Mesh;
+private:
+	UMaterialInstanceDynamic* DynamicMaterial;
+	UTextRenderComponent* Text;
 
 };
